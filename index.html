@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <button class="decreament-btn">-</button>
+            <input type="text" value="0" class="counter-value">
+            <button class="increament-btn">+</button>
+        </div>
+    </div>
+    <script>
+        let decreament =document.querySelector('.decreament-btn');
+        let increament =document.querySelector('.increament-btn');
+        let counter =document.querySelector('.counter-value');
+        let v=0;
+
+        increament.onclick= function(){
+            v++;
+            counter.value =v;
+        }
+        decreament.onclick= function(){
+            if (v===0){
+                v =0;
+            }else{
+                v--;
+                counter.value =v;
+            }
+        }
+    </script>
+</body>
+</html>
